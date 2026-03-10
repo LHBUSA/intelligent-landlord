@@ -1,3 +1,4 @@
+import Link from 'next/link'
 'use client'
 import { useState } from 'react'
 
@@ -154,10 +155,10 @@ function DepositTool() {
           <Result label="Maximum Deposit" value={info.limit} highlight />
           <Result label="Return Deadline" value={info.deadline} />
           <div style={{ marginTop: 16, padding: 14, background: 'var(--bg)', border: '1px solid var(--border2)' }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: 'var(--muted)', lineHeight: 1.7 }}>For full landlord-tenant law details, see the <a href={`/legal/states/${stateAbbr.toLowerCase()}`} style={{ color: 'var(--teal)' }}>{stateAbbr} state guide →</a></p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: 'var(--muted)', lineHeight: 1.7 }}>For full landlord-tenant law details, see the <Link href={`/legal/states/${stateAbbr.toLowerCase()}`} style={{ color: 'var(--teal)' }}>{stateAbbr} state guide →</Link></p>
           </div>
         </div>
-      ) : <p style={{ color: 'var(--muted)', fontSize: 14 }}>Data not available for this state. Check the <a href="/legal/states" style={{ color: 'var(--teal)' }}>state guide</a>.</p>}
+      ) : <p style={{ color: 'var(--muted)', fontSize: 14 }}>Data not available for this state. Check the <Link href="/legal/states" style={{ color: 'var(--teal)' }}>state guide</Link>.</p>}
     </>
   )
 }
