@@ -1,5 +1,6 @@
-import Link from 'next/link'
 'use client'
+import Link from 'next/link'
+
 import { useState } from 'react'
 
 type Tool = 'roi' | 'deposit' | 'cashflow' | 'rent_increase' | 'eviction_cost' | 'dti' | 'refi'
@@ -328,3 +329,4 @@ export default function ToolsPage() {
     </div>
   )
 }
+
