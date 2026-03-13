@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { STATES } from '@/lib/state-data'
@@ -44,3 +45,4 @@ export default function StatesPage() {
     </div>
   )
 }
+
